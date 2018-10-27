@@ -1,0 +1,6 @@
+donjayamanne.githistory
+felipecaputo.git-project-manager
+formulahendry.code-runner
+joaompinto.asciidoctor-vscode
+ms-vscode.cpptools
+robertohuertasm.vscode-icons
