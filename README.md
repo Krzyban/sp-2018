@@ -2,7 +2,7 @@
 
 ### Bash
 
-##Bash 2-gie podejsci
+### Bash 2-gie podejsci
 
 ### 3-cie podejscie
 
