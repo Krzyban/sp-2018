@@ -1,17 +1,22 @@
 #include <stdio.h>
 
-// wypisz przywitanie w kilku jezykach
-void hej(char* who);
+void wczytaj_dane(int*a, int*b) {
+    printf("podaj a, b: ");
+    scanf("%d %d", a, b);
+}
+
+void wypisz_wyniki(int k, int m){
+    printf("wyniki czterech dzialan na x = %d, y = %d\n", k, m);
+    printf("x + y =%d\n", k + m);
+
+}
 
 int main()
 {
-    hej("krzysztof");
-}
+    int x, y;
 
-// moje funkcje
+    wczytaj_dane(&x,&y);
+    wypisz_wyniki(x, y);
 
-void hej(char* who) 
-{
-    printf("hello %s\n", who);
-    printf("witaj %s\n", who);
+   
 }
