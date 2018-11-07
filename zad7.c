@@ -8,7 +8,7 @@ int main(){
   float liczba;
   printf("prosze podac liczbe rzeczywista");
   scanf("%f",&liczba);
-  if(liczba=0)
+  if(liczba==0)
   {
     printf("podana liczba to 0");
     exit(1);
