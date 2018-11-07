@@ -17,4 +17,5 @@ int main()
         exit(1);
     }
     printf("pierwiastek =%f",sqrt(liczba));
+
 }
