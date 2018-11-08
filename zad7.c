@@ -18,7 +18,7 @@ int main(){
     printf("podana liczba jest mniejsza od 0");
     exit(1);
   }
-printf("pierwiastek =%f",sqrt(liczba));
+printf("pierwiastek =%f\n",sqrt(liczba));
 printf("odwrotnosc =%f",powf(liczba,-1));
 
 }
