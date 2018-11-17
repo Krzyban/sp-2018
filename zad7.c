@@ -10,13 +10,13 @@ int main(){
   scanf("%f",&liczba);
   if(liczba==0)
   {
-    printf("podana liczba to 0 pierwiastek wynosi 0");
+    printf("podana liczba to 0 pierwiastek wynosi 0 odwrotnosc wynosi 0");
     
     exit(1);
 }
   if(liczba<0)
   {
-    printf("podana liczba jest mniejsza od 0\n");
+    printf("podana liczba jest mniejsza od 0(brak pierwiastka)\n");
     printf("odwrotnosc =%f",powf(liczba,-1));
     exit(1);
   }
