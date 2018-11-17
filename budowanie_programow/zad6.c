@@ -5,18 +5,18 @@
 int main(void){
   double a;
 
-  printf(stdout,"Podaj liczbe rzeczywistą nieujemną ");
+  printf("Podaj liczbe rzeczywistą nieujemną ");
   scanf("%d",&a);
+}
   // printf("\n");
 
   if(a < 0){
-    printf(stderr,"Błąd. Liczba %d jest ujemna\n",a);
+    printf("Błąd. Liczba %d jest ujemna",a);
     exit(1);
   }
   else{
-    printf("Kwadrat liczby %dlf wynosi %.d\n",a,a*a);
+    printf("Kwadrat liczby %d wynosi",sqrt(a));
   }
-    
+  
 
-  return 0;
-}
+
