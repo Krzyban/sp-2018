@@ -10,7 +10,7 @@ int main(){
   scanf("%f",&liczba);
   if(liczba==0)
   {
-    printf("podana liczba to 0");
+    printf("podana liczba to 0 pierwiastek wynosi 0");
     exit(1);
 }
   if(liczba<0)
