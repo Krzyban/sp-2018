@@ -4,9 +4,18 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-int i, j;
+
+
+void print_chessboard();
+
 int main()
 {
+  print_chessboard();
+}
+
+void print_chessboard()
+{
+  int i, j;
   for(i=0; i<10; i++)
   {
     if(i%2==1)
