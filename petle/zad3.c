@@ -5,9 +5,17 @@
 #include <math.h>
 #include <stdlib.h>
 
-int a, b, i;
+void  take_input_and_print();
+
+
 int main()
 {
+  take_input_and_print();
+}
+
+void take_input_and_print()
+{
+  int a, b, i;
   printf("podaj a ,oraz b");
   scanf("%d %d", &a, &b);
   if(a<b)
