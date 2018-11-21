@@ -19,7 +19,7 @@ int main()
   if (tablica[i] > max)
     max = tablica[i];
   }
-  min = 0;
+  min = tablica[1];
   for (i = 0; i < 6; ++i)
   {
     if (tablica[i] < min)
