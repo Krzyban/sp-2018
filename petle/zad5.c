@@ -7,6 +7,7 @@
 
 int i;
 
+
 int main()
 {
   printf("podaj 6 liczb oddzielonych spacjami");
