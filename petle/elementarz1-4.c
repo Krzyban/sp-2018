@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 
-void take_input();
-void calculate_and_print();
 
 int main()
 {
