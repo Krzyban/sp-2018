@@ -2,14 +2,19 @@
 
 #include <stdio.h>
 
+void calculate();
 
 int main()
+{
+  calculate();
+}
+void calculate()
 {
   int i,n,res;
   printf("podaj liczbe z ktorej ma byc obliczana silnia");
   scanf("%d",&n);
   res=1;
-  for(i=n-1;i>=1;i--)
+  for(i=n;i>=1;i--)
   {
     res=res*i;
   }
