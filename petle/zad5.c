@@ -5,11 +5,15 @@
 #include <math.h>
 #include <stdlib.h>
 
-int i;
-
+void print_input();
 
 int main()
 {
+  print_input();
+}
+void print_input()
+{
+  int i;
   printf("podaj 6 liczb oddzielonych spacjami");
   int tablica[6];
   for(int i=0;i<6;i++)
