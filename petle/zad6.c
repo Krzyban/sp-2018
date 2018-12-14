@@ -4,28 +4,40 @@
 #include <math.h>
 #include <stdlib.h>
 
-int i,max,min;
+void take_input(int *input);
+void print_results(int *input);
+
 int main()
 {
   int tablica[6];
+  take_input(tablica);
+  print_results(tablica);
+}
+
+void take_input(int *input)
+{
   printf("podaj 6 liczb do tablicy");
-  for(i=0; i<=5; i++)
+  for(int i=0; i<=5; i++)
   {
-    scanf("%d",&tablica[i]);
+    scanf("%d",&input[i]);
   }
-  max = 0;
-  for (i = 0; i < 6; ++i)
+}
+
+void print_results(int *input)
+{
+  int max = 0;
+  for (int i = 0; i < 6; ++i)
   {
-  if (tablica[i] > max)
-    max = tablica[i];
+  if (input[i] > max)
+    max = input[i];
   }
-  min = tablica[1];
-  for (i = 0; i < 6; ++i)
+  int min = input[1];
+  for (int i = 0; i < 6; ++i)
   {
-    if (tablica[i] < min)
-    min= tablica[i];
+    if (input[i] < min)
+    min= input[i];
   }
   printf("min=%d",min);
   printf("max=%d",max);
-
 }
+

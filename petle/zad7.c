@@ -5,20 +5,32 @@
 #include <math.h>
 #include <stdlib.h>
 
-int i,m=0;
+void take_input(int *input);
+void print_result(int *input);
 
 int main()
 {
-  //int tablica[]={90.776, 92.906, 2, 3, 44, 5};
   int tablica[6];
+  take_input(tablica);
+  print_result(tablica);
+}
+
+void take_input(int *input)
+{
+  //int tablica[]={90.776, 92.906, 2, 3, 44, 5};
   printf("podaj 6 liczb do tablicy");
-  for(i=0; i<=5; i++)
+  for(int i=0; i<=5; i++)
   {
-    scanf("%d",&tablica[i]);
+    scanf("%d",&input[i]);
   }
-  for(i=0; i<=5; i++)
+}
+
+void print_result(int *input)
+{
+  int m =0;
+  for(int i=0; i<=5; i++)
   {
-    if(tablica[i]>=0)
+    if(input[i]>=0)
       m=m+1;
   }
   printf("tablica zawiera %d liczb dodatnich",m);
