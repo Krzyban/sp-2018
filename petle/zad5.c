@@ -5,25 +5,30 @@
 #include <math.h>
 #include <stdlib.h>
 
-void print_input();
+void take_input(int *input);
+void print_result(int *input);
 
 int main()
 {
-  print_input();
-}
-void print_input()
-{
-  int i;
-  printf("podaj 6 liczb oddzielonych spacjami");
   int tablica[6];
+  take_input(tablica);
+  print_result(tablica);
+}
+
+void take_input(int *input)
+{
+  printf("podaj 6 liczb oddzielonych spacjami");
   for(int i=0;i<6;i++)
-    scanf("%d",&tablica[i]);
+    scanf("%d",&input[i]);
+}
+void print_result(int *input)
+{
   printf("od poczatku");
-  for(i=0; i<=5; i++)
-    printf("%d ",tablica[i]);
+  for(int i=0; i<=5; i++)
+    printf("%d ",input[i]);
 
   printf("od  konca");
-  for (i=5; i>=0; i--)
-    printf("%d ",tablica[i]);
+  for (int i=5; i>=0; i--)
+    printf("%d ",input[i]);
   
 }
