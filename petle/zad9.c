@@ -1,6 +1,4 @@
 // etiopski sposób mnożenia dwóch liczb
-// zad9 z podstrony pętle ze strony
-// zadań z języków programowania
 
 #include<stdio.h>
 
