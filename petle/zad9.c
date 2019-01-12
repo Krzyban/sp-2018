@@ -1,4 +1,4 @@
-// etiopski sposób mnożenia dwóch liczb
+// etiopski sposób mnożenia dwóch liczb - film z yt
 
 #include<stdio.h>
 
