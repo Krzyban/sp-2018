@@ -23,12 +23,12 @@ void porownaj(char **A, int a)
 	{
 		for(int j=0; j<i; j++)//żeby nie porownywalo bez sensu dodatkowo 0z1 i 1z0
 		{
-			int l=0;//zlicza ilosc prawidlowych literek ma byc 25
+			int l=0;//zlicza ilośc prawidłowych literek ma byc 25
 			int c=0;//znacznik pozycji w wyrazie 0-25
 			int x=0;//licznik błędów max 1
-			while(x<2 && c<26)//c skacze po wyrazie x sprawdza ilosc bledow
+			while(x<2 && c<26)//c skacze po wyrazie x sprawdza ilosc błędów
 			{
-				if(*(A[i]+c) == *(A[j]+c))//j jest do porownywania
+				if(*(A[i]+c) == *(A[j]+c))//j jest do porównywania
 				{
 					c++;
 					l++;
@@ -40,7 +40,7 @@ void porownaj(char **A, int a)
 				}
 			}
 			if(l==25)
-			printf("%s\n%s\n",A[i],A[j]); //wypisz wynik z 2 tablic dla pewnosci
+			printf("%s\n%s\n",A[i],A[j]); //wypisz wynik z 2 tablic dla pewności
 		}
 	}
 }
