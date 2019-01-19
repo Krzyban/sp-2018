@@ -23,21 +23,21 @@
 #define MDN 254
 #define MN 10
 
-void czytajplik();
-void porownaj();
+void read_data();
+void compare();
 
 int main()
 {
   int a=250;
   FILE *fp = fopen("slowa","r");
   char **A = (char**) malloc(a*sizeof(char*));//zapisuje wyrazy do tablicy
-  czytajplik(A,a,fp);
+  read_data(A,a,fp);
   fclose(fp);
-  porownaj(A,a);
+  compare(A,a);
   return 1;
 }
 
-void czytajplik(char **A, int ilosc, FILE *fp)
+void read_data(char **A, int ilosc, FILE *fp)
 {
   char slowo[MDN];
   int i=0;
@@ -49,16 +49,16 @@ void czytajplik(char **A, int ilosc, FILE *fp)
   }
 }
 
-void porownaj(char **A, int a)
+void compare(char **A, int a)
 {
   for(int i=1; i<a; i++)
   {
-    for(int j=0; j<i; j++)//żeby nie porownywalo bez sensu dodatkowo 0z1 i 1z0
+    for(int j=0; j<i; j++)//żeby nie porownywało bez sensu dodatkowo 0 z 1 i 1z0
     {
-      int l=0;//zlicza ilośc prawidłowych literek ma byc 25
+      int l=0;//zlicza ilośc prawidłowych literek ma być 25
       int c=0;//znacznik pozycji w wyrazie 0-25
       int x=0;//licznik błędów max 1
-      while(x<2 && c<26)//c skacze po wyrazie x sprawdza ilosc błędów
+      while(x<2 && c<26)//c skacze po wyrazie ,a x sprawdza ilosc błędów
       {
         if(*(A[i]+c) == *(A[j]+c))//j jest do porównywania
         {

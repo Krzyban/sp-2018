@@ -15,20 +15,20 @@
 #define MDN 254
 #define MN 10
 
-void czytajplik();
-void zliczlitery();
+void read_data();
+void count_letters();
 
 int main()
 {
   int a=250;
   FILE *fp = fopen("slowa","r");
   char **A = (char**) malloc(a*sizeof(char*));//tablica wyrazów
-  czytajplik(A,a,fp);
+  read_data(A,a,fp);
   fclose(fp);
-  zliczlitery(A,a);
+  count_letters(A,a);
 }
 
-void czytajplik(char **A, int ilosc, FILE *fp)
+void read_data(char **A, int ilosc, FILE *fp)
 {
   char slowo[MDN];// wczytanie wyrazów z pliku
   int i=0;
@@ -40,7 +40,7 @@ void czytajplik(char **A, int ilosc, FILE *fp)
   }
 }
 
-void zliczlitery(char **A, int a)
+void count_letters(char **A, int a)
 {
   int x;
   int dwa = 0;
