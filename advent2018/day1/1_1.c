@@ -1,7 +1,30 @@
+//Starting with a frequency of zero, 
+//what is the resulting frequency after all of the changes 
+//in frequency have been applied?
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
-void czytajplik(int *tab, FILE *fp)
+void read_data();
+int count();
+void sum();
+
+
+int main()
+{
+    FILE *fp = fopen("input","r");//liczy zmienne
+    int a=count(fp);
+    fclose(fp);
+    int tab[a];
+    fopen("input","r");
+    read_data(tab, fp);
+    fclose(fp);
+    sum(tab,a);
+    return 1;
+} 
+void read_data(int *tab, FILE *fp)
 {
     int a = 0;
     int x;
@@ -12,7 +35,7 @@ void czytajplik(int *tab, FILE *fp)
     }
 }
 
-int zliczzmienne(FILE *fp)
+int count(FILE *fp)
 {
     int a = 0;
     int x;
@@ -23,7 +46,7 @@ int zliczzmienne(FILE *fp)
     return a;
 }
 
-void suma(int *tab, int a)
+void sum(int *tab, int a)
 {
     int suma = 0;
     for (int i = 0; i < a; i++){
@@ -32,15 +55,4 @@ void suma(int *tab, int a)
     printf("Suma  %d\n", suma); // wypisz wynik
 }
 
-int main()
-{
-    FILE *fp = fopen("input","r");//liczy zmienne
-    int a=zliczzmienne(fp);
-    fclose(fp);
-    int tab[a];
-    fopen("input","r");
-    czytajplik(tab, fp);
-    fclose(fp);
-    suma(tab,a);
-    return 1;
-} 
+

@@ -1,7 +1,30 @@
+//Here are other examples:
+//+1, -1 first reaches 0 twice.
+//+3, +3, +4, -2, -4 first reaches 10 twice.
+//-6, +3, +8, +5, -6 first reaches 5 twice.
+//+7, +7, -2, -7, -4 first reaches 14 twice.
+//What is the first frequency your device reaches twice?
+
 #include <stdio.h>
 #include <stdlib.h>
 
-void czytajplik(int *tab, FILE *fp)
+void read_data();
+int count();
+void check();
+
+int main()
+{
+    FILE *fp = fopen("input","r");//liczy zmienne
+    int a=count(fp);
+    fclose(fp);
+    int tab[a];
+    fopen("input","r");
+    read_data(tab, fp);
+    fclose(fp);
+    check(tab, a);
+} 
+
+void read_data(int *tab, FILE *fp)
 {
     int a = 0;
     int x;
@@ -12,7 +35,7 @@ void czytajplik(int *tab, FILE *fp)
     }
 }
 
-int zliczzmienne(FILE *fp)
+int count(FILE *fp)
 {
     int a = 0;
     int x;
@@ -23,10 +46,10 @@ int zliczzmienne(FILE *fp)
     return a;
 }
 
-void sprawdz(int *tab, int a)
+void check(int *tab, int a)
 {
     int go=0;
-    int suma[200000];// tablica na milion
+    int suma[200000];// tablica na 200tys
     suma[0]=tab[0];//pierwszy na sztywno
     int i = 1;
     int x = 1;
@@ -47,15 +70,3 @@ void sprawdz(int *tab, int a)
             x=0;
     }
 }
-
-int main()
-{
-    FILE *fp = fopen("input","r");//liczy zmienne
-    int a=zliczzmienne(fp);
-    fclose(fp);
-    int tab[a];
-    fopen("input","r");
-    czytajplik(tab, fp);
-    fclose(fp);
-    sprawdz(tab, a);
-} 
