@@ -54,6 +54,6 @@ int main()
 	fclose(fp);
 	porownaj(A,a);
 	return 1;
-}
+} 
 
 
