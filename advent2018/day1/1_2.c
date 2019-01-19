@@ -58,4 +58,4 @@ int main()
     czytajplik(tab, fp);
     fclose(fp);
     sprawdz(tab, a);
-}
+} 

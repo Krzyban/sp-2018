@@ -43,4 +43,4 @@ int main()
     fclose(fp);
     suma(tab,a);
     return 1;
-}
+} 
