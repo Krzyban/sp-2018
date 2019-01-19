@@ -59,7 +59,7 @@ int main()
 {
 	int a=250;
 	FILE *fp = fopen("slowa","r");
-  char **A = (char**) malloc(a*sizeof(char*));//tablica wyrazów
+	char **A = (char**) malloc(a*sizeof(char*));//tablica wyrazów
 	czytajplik(A,a,fp);
 	fclose(fp);
 	zliczlitery(A,a);
