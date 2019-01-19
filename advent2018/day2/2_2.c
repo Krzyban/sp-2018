@@ -1,3 +1,22 @@
+//The boxes will have IDs which differ by 
+//exactly one character at the same position in both strings. 
+//For example, given the following box IDs:
+
+//abcde
+//fghij
+//klmno
+//pqrst
+//fguij
+//axcye
+//wvxyz
+//The IDs abcde and axcye are close, but they differ by two characters (the second and fourth). 
+//However, the IDs fghij and fguij differ by exactly one character, the third (h and u). 
+//Those must be the correct boxes.
+
+//What letters are common between the two correct box IDs? 
+//(In the example above, this is found by removing the differing character from either ID, producing fgij.)
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,7 +24,18 @@
 #define MDN 254
 #define MN 10
 
-void czytajplik(char **A, int ilosc, FILE *fp)
+int main()
+{
+  int a=250;
+  FILE *fp = fopen("slowa","r");
+  char **A = (char**) malloc(a*sizeof(char*));//zapisuje wyrazy do tablicy
+  czytajplik(A,a,fp);
+  fclose(fp);
+  porownaj(A,a);
+  return 1;
+}
+
+void read_data(char **A, int ilosc, FILE *fp)
 {
   char slowo[MDN];
   int i=0;
@@ -44,16 +74,3 @@ void porownaj(char **A, int a)
     }
   }
 }
-
-int main()
-{
-  int a=250;
-  FILE *fp = fopen("slowa","r");
-  char **A = (char**) malloc(a*sizeof(char*));//zapisuje wyrazy do tablicy
-  czytajplik(A,a,fp);
-  fclose(fp);
-  porownaj(A,a);
-  return 1;
-} 
-
-
