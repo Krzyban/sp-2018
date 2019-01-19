@@ -15,6 +15,9 @@
 #define MDN 254
 #define MN 10
 
+void czytajplik();
+void zliczlitery();
+
 int main()
 {
   int a=250;
@@ -25,7 +28,7 @@ int main()
   zliczlitery(A,a);
 }
 
-void read_data(char **A, int ilosc, FILE *fp)
+void czytajplik(char **A, int ilosc, FILE *fp)
 {
   char slowo[MDN];// wczytanie wyrazów z pliku
   int i=0;

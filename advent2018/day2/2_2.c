@@ -23,6 +23,9 @@
 #define MDN 254
 #define MN 10
 
+void czytajplik();
+void porownaj();
+
 int main()
 {
   int a=250;
@@ -34,7 +37,7 @@ int main()
   return 1;
 }
 
-void read_data(char **A, int ilosc, FILE *fp)
+void czytajplik(char **A, int ilosc, FILE *fp)
 {
   char slowo[MDN];
   int i=0;
