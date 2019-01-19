@@ -1,3 +1,13 @@
+//To make sure you didn't miss any, you scan the likely candidate boxes again,
+//counting the number that have an ID containing exactly two of any letter 
+//and then separately counting those with exactly three of any letter. 
+//You can multiply those two counts together to get a rudimentary checksum 
+//and compare it to what your device predicts.
+//Of these box IDs, four of them contain a letter which appears exactly twice,
+// and three of them contain a letter which appears exactly three times. 
+//Multiplying these together produces a checksum of 4 * 3 = 12.
+//What is the checksum for your list of box IDs?
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
