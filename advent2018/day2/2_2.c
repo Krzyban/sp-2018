@@ -53,7 +53,7 @@ void compare(char **A, int a)
 {
   for(int i=1; i<a; i++)
   {
-    for(int j=0; j<i; j++)//żeby nie porownywało bez sensu dodatkowo 0 z 1 i 1z0
+    for(int j=0; j<i; j++)//żeby nie porownywało bez sensu dodatkowo 0 z 1 i 1 z 0
     {
       int l=0;//zlicza ilośc prawidłowych literek ma być 25
       int c=0;//znacznik pozycji w wyrazie 0-25
