@@ -1,6 +1,6 @@
-## Zadania z katalogu pętle na:
+## Zadania z katalogu budowanie programów na:
 
-* (http://wbzyl.inf.ug.edu.pl/c/petle).
+* (http://wbzyl.inf.ug.edu.pl/c/budowanie-programow).
 
 ## Aby skomplikować program należy wpisać w terminalu "make (nazwa)"
 
