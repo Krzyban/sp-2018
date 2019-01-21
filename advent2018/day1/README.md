@@ -2,7 +2,7 @@
 * [Advent of Code]( https://adventofcode.com/ ).
 
 # Aby skompilować programy należy w konsoli wpisać: 
-## make (1_1 lub 1_2)
+## "make (1_1 lub 1_2)"
 
 # DAY 1
 
