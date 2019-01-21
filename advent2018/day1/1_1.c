@@ -15,7 +15,7 @@ void sum();
 int main()
 {
 	FILE *fp = fopen("input","r");//liczy zmienne
-  int a=count(fp);
+	int a=count(fp);
 	fclose(fp);
 	int tab[a];
 	fopen("input","r");
