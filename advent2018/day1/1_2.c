@@ -69,4 +69,4 @@ void check(int *tab, int a)
     if(x>=a)//jesli przekroczy liczbe zmiennych
     x=0;
   }
-}  
+}

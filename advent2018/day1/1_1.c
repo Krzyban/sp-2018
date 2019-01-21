@@ -55,4 +55,3 @@ void sum(int *tab, int a)
   }
   printf("Suma  %d\n", suma); // wypisz wynik
 } 
- 
