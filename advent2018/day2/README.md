@@ -1,5 +1,7 @@
 # DAY 2
 
+# Plik z danymi wejściowymi do części pierwszej i drugiej: "slowa"
+
 # Treść zadania 1:
 
 ## Część 1:
