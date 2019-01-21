@@ -54,5 +54,5 @@ void sum(int *tab, int a)
 		suma+=tab[i];//suma=suma+tab[1] - sumowanie kolejnych wartosci
 	}
 	printf("Suma  %d\n", suma); // wypisz wynik
-}
+} 
 
