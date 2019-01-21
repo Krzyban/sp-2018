@@ -19,3 +19,4 @@ int main()
     printf("pierwiastek =%f",sqrt(liczba));
 
 }
+ 
