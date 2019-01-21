@@ -1,13 +1,16 @@
-## Notatki do JP i SP
+## Notatki do jezykow JP
 
-### Bash
+### Bash, trzecie podejscie
 
-### Bash 2-gie podejsci
+* [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line ).
+* [Tech is the new literacy](https://www.learnenough.com/).
 
-### 3-cie podejscie
+## Przydatne linki:
+* [Command Line](https://www.learnenough.com/command-line-tutorial#sec-summary_cleaning).
 
-* [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line/blob/master/README.md).
-* [Tech is the new literacy](https://www.learnenough.com/). 
+* [Bash](http://wbzyl.inf.ug.edu.pl/sp/).
 
-### funkcja scanf, printf, if, else, 
-### programy porównywujący wielkosci liczb, pierwiastkujący i odwracający liczbę.
+* [Codewars](https://www.codewars.com/).
+
+
+
