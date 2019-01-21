@@ -3,6 +3,7 @@
 
 # Aby skompilować programy należy w konsoli wpisać: 
 ## "make (1_1 lub 1_2)"
+# Plik z danymi wejściowymi do części pierwszej i drugiej: "input"
 
 # DAY 1
 
