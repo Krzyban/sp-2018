@@ -49,7 +49,8 @@ int count(FILE *fp)
 void sum(int *tab, int a)
 {
 	int suma = 0;
-	for (int i = 0; i < a; i++){
+	for (int i = 0; i < a; i++)
+	{
 		suma+=tab[i];//suma=suma+tab[1] - sumowanie kolejnych wartosci
 	}
 	printf("Suma  %d\n", suma); // wypisz wynik
