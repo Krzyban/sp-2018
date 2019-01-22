@@ -1,5 +1,5 @@
-//The boxes will have IDs which differ by 
-//exactly one character at the same position in both strings. 
+//The boxes will have IDs which differ by
+//exactly one character at the same position in both strings.
 //For example, given the following box IDs:
 
 //abcde
@@ -9,10 +9,10 @@
 //fguij
 //axcye
 //wvxyz
-//The IDs abcde and axcye are close, but they differ by two characters (the second and fourth). 
-//However, the IDs fghij and fguij differ by exactly one character, the third (h and u). 
+//The IDs abcde and axcye are close, but they differ by two characters (the second and fourth).
+//However, the IDs fghij and fguij differ by exactly one character, the third (h and u).
 //Those must be the correct boxes.
-//What letters are common between the two correct box IDs? 
+//What letters are common between the two correct box IDs?
 //(In the example above, this is found by removing the differing character from either ID, producing fgij.)
 
 
@@ -25,15 +25,18 @@
 
 void read_data();
 void compare();
+void print();
 
 int main()
 {
+  int word1=0, word2=0;
   int a=250;
   FILE *fp = fopen("slowa","r");
   char **A = (char**) malloc(a*sizeof(char*));//zapisuje wyrazy do tablicy
   read_data(A,a,fp);
   fclose(fp);
-  compare(A,a);
+  compare(A,a, &word1, &word2);
+  print(A, word1, word2);
   return 1;
 }
 
@@ -49,7 +52,7 @@ void read_data(char **A, int ilosc, FILE *fp)
   }
 }
 
-void compare(char **A, int a)
+void compare(char **A, int a, int *word1, int *word2)
 {
   for(int i=1; i<a; i++)
   {
@@ -68,11 +71,21 @@ void compare(char **A, int a)
         else
         {
           x++;
-          c++;				
+          c++;               
         }
       }
       if(l==25)
-      printf("%s\n%s\n",A[i],A[j]); //wypisz wynik z 2 tablic dla pewności
+      {
+        *word1=i;
+        *word2=j;
+      }
     }
   }
+}
+
+void print(char **A, int word1, int word2)
+{
+    for (int i=0; i<26; i++)
+        if(*(A[word1]+i)==*(A[word2]+i))
+            printf("%c",*(A[word2]+i));
 }
