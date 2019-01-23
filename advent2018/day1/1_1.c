@@ -22,7 +22,6 @@ int main()
   read_data(tab, fp);
   fclose(fp);
   sum(tab,a);
-  return 1;
 } 
 void read_data(int *tab, FILE *fp)
 {
