@@ -29,26 +29,24 @@ void print();
 
 int main()
 {
-  int word1=0, word2=0;
-  int a=250;
+  int a=250, word1=0, word2=0;
   FILE *fp = fopen("slowa","r");
   char **A = (char**) malloc(a*sizeof(char*));//zapisuje wyrazy do tablicy
   read_data(A,a,fp);
   fclose(fp);
   compare(A,a, &word1, &word2);
   print(A, word1, word2);
-  return 1;
 }
 
 void read_data(char **A, int ilosc, FILE *fp)
 {
-  char slowo[MDN];
+  char letters[MDN];
   int i=0;
   for (i=0;i<ilosc; i++)
   {
-    fscanf(fp,"%s",slowo);
+    fscanf(fp,"%s",letters);
     A[i] = (char*) malloc(sizeof(char)*MDN);
-    strcpy(A[i],slowo);
+    strcpy(A[i],letters);
   }
 }
 

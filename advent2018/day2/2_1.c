@@ -43,15 +43,11 @@ void read_data(char **A, int ilosc, FILE *fp)
 void count_letters(char **A, int a)
 {
   int x;
-  int dwa = 0;
-  int trzy = 0;
   int licznik[26]={0};//26x0w tablicy poczatkowych wartości
   int wynik1=0, wynik2=0;
   for(int i=0; i<a; i++)
   {
-    dwa=0;//liczniki 2 i 3
-    trzy=0;
-    int j=0;
+    int dwa=0, trzy=0, j=0;//liczniki 2 i 3
     while(*(A[i]+j) != '\0')
     {
       if (*(A[i]+j) >= 'a' && *(A[i]+j) <= 'z')//sprawdza czy jest litera
