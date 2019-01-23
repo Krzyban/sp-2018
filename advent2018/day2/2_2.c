@@ -85,7 +85,7 @@ void compare(char **A, int a, int *word1, int *word2)
 
 void print(char **A, int word1, int word2)
 {
-    for (int i=0; i<26; i++)
-        if(*(A[word1]+i)==*(A[word2]+i))
-            printf("%c",*(A[word2]+i));
+  for (int i=0; i<26; i++)
+    if(*(A[word1]+i)==*(A[word2]+i))
+      printf("%c",*(A[word2]+i));
 }
