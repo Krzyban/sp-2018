@@ -7,8 +7,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void read_data();
 int count();
+void read_data();
 void sum();
 
 
@@ -23,16 +23,6 @@ int main()
   fclose(fp);
   sum(tab,a);
 } 
-void read_data(int *tab, FILE *fp)
-{
-  int a = 0;
-  int x;
-  while(fscanf(fp,"%d",&x) != EOF)
-  {
-    tab[a] = x;
-    a++;
-  }
-}
 
 int count(FILE *fp)
 {
@@ -45,12 +35,23 @@ int count(FILE *fp)
   return a;
 }
 
+void read_data(int *tab, FILE *fp)
+{
+  int a = 0;
+  int x;
+  while(fscanf(fp,"%d",&x) != EOF)
+  {
+    tab[a] = x;
+    a++;
+  }
+}
+
 void sum(int *tab, int a)
 {
-  int suma = 0;
+  int sum = 0;
   for (int i = 0; i < a; i++)
   {
-    suma+=tab[i];//suma=suma+tab[1] - sumowanie kolejnych wartosci
+    sum+=tab[i];//suma=suma+tab[1] - sumowanie kolejnych wartosci
   }
-  printf("Suma  %d\n", suma); // wypisz wynik
+  printf("Sum= %d\n", sum); // wypisz wynik
 } 
