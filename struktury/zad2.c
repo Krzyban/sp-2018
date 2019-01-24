@@ -31,12 +31,14 @@ int disjointrect(struct rect r1, struct rect r2);
 int main()
 {
   struct rect r1 = {
-      .low_left = make_point(2, 4),
-      .upp_right = make_point(6, 9)};
+    .low_left = make_point(2, 4),
+    .upp_right = make_point(6, 9)
+  };
 
   struct rect r2 = {
-      .low_left = make_point(1, 3),
-      .upp_right = make_point(7, 10)};
+    .low_left = make_point(1, 3),
+    .upp_right = make_point(7, 10)
+  };
 
   printf("%d\n", disjointrect(r1, r2));
 }
