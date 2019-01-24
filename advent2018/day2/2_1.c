@@ -30,46 +30,46 @@ int main()
 
 void read_data(char **A, int ilosc, FILE *fp)
 {
-  char slowo[MDN];// wczytanie wyrazów z pliku
+  char word[MDN];// wczytanie wyrazów z pliku
   int i=0;
   for (i=0;i<ilosc; i++)
   {
-    fscanf(fp,"%s",slowo);
+    fscanf(fp,"%s",word);
     A[i] = (char*) malloc(sizeof(char)*MDN);
-    strcpy(A[i],slowo);//przeniesienie do tablicy A z słowo
+    strcpy(A[i],word);//przeniesienie do tablicy A z słowo
   }
 }
 
 void count_letters(char **A, int a)
 {
   int x;
-  int licznik[26]={0};//26x0w tablicy poczatkowych wartości
-  int wynik1=0, wynik2=0;
+  int counter[26]={0};//26x0w tablicy poczatkowych wartości
+  int result1=0, result2=0;
   for(int i=0; i<a; i++)
   {
-    int dwa=0, trzy=0, j=0;//liczniki 2 i 3
+    int two=0, three=0, j=0;//liczniki 2 i 3
     while(*(A[i]+j) != '\0')
     {
       if (*(A[i]+j) >= 'a' && *(A[i]+j) <= 'z')//sprawdza czy jest litera
       {
         x = *(A[i]+j) - 'a';//kod asci -a=liczba od 0 do 26 która bedzie miejscem w tablicy
-        licznik[x]++;//dane miejsce zmieni sie z 0 na 1
+        counter[x]++;//dane miejsce zmieni sie z 0 na 1
       }
       j++;
     }
     for(int c=0; c<26; c++)// kontrola wartosci na pozycjach c w wyrazie
     {
-      if(licznik[c]==2)
-        dwa=1;
-      if(licznik[c]==3)
-        trzy=1;
-      licznik[c]=0;//zerowanie by nie mieszało sie przy kolejnych wyrazach
+      if(counter[c]==2)
+        two=1;
+      if(counter[c]==3)
+        three=1;
+      counter[c]=0;//zerowanie by nie mieszało sie przy kolejnych wyrazach
     }
-    if(dwa>0)//nie ma zliczac podwojnie
-      wynik1++;
-    if(trzy>0)
-      wynik2++;
+    if(two>0)//nie ma zliczac podwojnie
+      result1++;
+    if(three>0)
+      result2++;
   }
-  int wynik = wynik1 * wynik2;	
-  printf("Wynik - %d\n", wynik);	
+  int result = result1 * result2;	
+  printf("result %d\n", result);	
 }

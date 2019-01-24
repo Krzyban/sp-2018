@@ -46,7 +46,7 @@ void read_data(char **A, int ilosc, FILE *fp)
   {
     fscanf(fp,"%s",letters);
     A[i] = (char*) malloc(sizeof(char)*MDN);
-    strcpy(A[i],letters);
+    strcpy(A[i],letters);//z letters do A
   }
 }
 
