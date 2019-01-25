@@ -49,16 +49,16 @@ void read_data(int *tab, FILE *fp)
 void check(int *tab, int a)
 {
   int go=0;
-  int sum[200000];// tablica na 200tys
+  int sum[200000];
   sum[0]=tab[0];//pierwszy na sztywno
   int i = 1;
   int x = 1;
   while(go==0)
   {
-    sum[i]=sum[i-1]+tab[x]; //dodawanie kolejnych wartosci
+    sum[i]=sum[i-1]+tab[x]; //dodawanie kolejnych wartości
     for (int j = 0; j < i; j++)
     {
-      if (sum[j]==sum[i])//sprawdzanie wszystkich poprzednich wartosci - szukanie odpowiedzi
+      if (sum[j]==sum[i])//sprawdzanie wszystkich poprzednich wartości - szukanie odpowiedzi
       {
         printf("frequency %d (position %d)\n", sum[j],i);// wypisanie rozwiazania
         go=1;
@@ -66,7 +66,7 @@ void check(int *tab, int a)
     }
     i++;
     x++;
-    if(x>=a)//jesli przekroczy liczbe zmiennych
+    if(x>=a)//jesli przekroczy liczbę zmiennych
     x=0;
   }
 }

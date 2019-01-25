@@ -51,7 +51,7 @@ void sum(int *tab, int a)
   int sum = 0;
   for (int i = 0; i < a; i++)
   {
-    sum+=tab[i];// sumowanie kolejnych wartosci
+    sum+=tab[i];// sumowanie kolejnych wartości
   }
   printf("Sum= %d\n", sum); // wypisz wynik
 } 
