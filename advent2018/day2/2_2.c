@@ -38,11 +38,11 @@ int main()
   print(A, word1, word2);
 }
 
-void read_data(char **A, int ilosc, FILE *fp)
+void read_data(char **A, int amount, FILE *fp)//amount=a
 {
   char letters[MDN];
   int i=0;
-  for (i=0;i<ilosc; i++)
+  for (i=0;i<amount; i++)
   {
     fscanf(fp,"%s",letters);
     A[i] = (char*) malloc(sizeof(char)*MDN);

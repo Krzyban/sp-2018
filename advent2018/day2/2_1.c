@@ -28,11 +28,11 @@ int main()
   count_letters(A,a);
 }
 
-void read_data(char **A, int ilosc, FILE *fp)
+void read_data(char **A, int amount, FILE *fp)
 {
   char word[MDN];// wczytanie wyrazów z pliku
   int i=0;
-  for (i=0;i<ilosc; i++)
+  for (i=0;i<amount; i++)
   {
     fscanf(fp,"%s",word);
     A[i] = (char*) malloc(sizeof(char)*MDN);
