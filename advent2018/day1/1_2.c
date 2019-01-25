@@ -14,7 +14,7 @@ void check();
 
 int main()
 {
-  FILE *fp = fopen("input","r");//liczy zmienne
+  FILE *fp = fopen("input","r");
   int a=count(fp);
   fclose(fp);
   int tab[a];
@@ -30,7 +30,7 @@ int count(FILE *fp)
   int x;
   while(fscanf(fp,"%d",&x) != EOF)
   {
-    a++;
+    a++;//liczy ilość zmiennych
   }
   return a;
 }

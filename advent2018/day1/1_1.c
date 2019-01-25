@@ -14,7 +14,7 @@ void sum();
 
 int main()
 {
-  FILE *fp = fopen("input","r");//liczy zmienne
+  FILE *fp = fopen("input","r");
   int a=count(fp);
   fclose(fp);
   int tab[a];
@@ -30,7 +30,7 @@ int count(FILE *fp)
   int x;
   while(fscanf(fp,"%d",&x) != EOF)
   {
-    a++;
+    a++;//zlicz ilość zmiennych
   }
   return a;
 }
@@ -51,7 +51,7 @@ void sum(int *tab, int a)
   int sum = 0;
   for (int i = 0; i < a; i++)
   {
-    sum+=tab[i];//suma=suma+tab[1] - sumowanie kolejnych wartosci
+    sum+=tab[i];// sumowanie kolejnych wartosci
   }
   printf("Sum= %d\n", sum); // wypisz wynik
 } 
