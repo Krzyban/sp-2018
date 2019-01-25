@@ -57,7 +57,7 @@ void count_letters(char **A, int a)
       }
       j++;
     }
-    for(int c=0; c<26; c++)// kontrola wartosci na pozycjach c w wyrazie
+    for(int c=0; c<26; c++)
     {
       if(counter[c]==2)
         two=1;
