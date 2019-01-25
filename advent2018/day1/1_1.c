@@ -2,8 +2,6 @@
 //what is the resulting frequency after all of the changes 
 //in frequency have been applied?
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
